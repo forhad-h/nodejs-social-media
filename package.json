@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-stream",
+  "version": "1.0.0",
+  "description": "File stream in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forhad-h/nodejs-stream.git"
+  },
+  "keywords": [
+    "nodejs",
+    "video",
+    "stream"
+  ],
+  "author": "Forhad Hosain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forhad-h/nodejs-stream/issues"
+  },
+  "homepage": "https://github.com/forhad-h/nodejs-stream#readme",
+  "dependencies": {
+    "facebook-api-video-upload": "^2.0.1",
+    "lodash": "^4.17.15",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "stream-to-promise": "^2.2.0"
+  }
+}
