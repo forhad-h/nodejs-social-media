@@ -4,6 +4,8 @@ const rp = require('request-promise')
 const streamToPromise = require('stream-to-promise')
 const _ = require('lodash')
 
+
+// retry 10 times on error
 const maxRetry = 10
 let retry = 0
 

@@ -2,15 +2,20 @@ const request = require('request')
 const rp = require('request-promise')
 
   ; (async () => {
+    const fileUrl = 'https://www.example.com/preview.mp4'
+    const objectId = 'page/group id'
+    const accessToken = 'access-token'
 
-    formData = { source: request('https://example.com/image_name.mp4') }
+    const formData = { source: request(fileUrl) }
 
     const apiParams = {
       method: 'POST',
-      uri: `https://graph-video.facebook.com/v4.0/${page / group - id}/videos`,
+      uri: `https://graph-video.facebook.com/v4.0/${objectId}/videos`,
       formData: formData,
       qs: {
-        access_token: 'page/group token'
+        access_token: accessToken,
+        title: "Some title here",
+        description: "caption of this video"
       }
     }
     try {
