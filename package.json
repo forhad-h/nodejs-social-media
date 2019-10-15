@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forhad-h/nodejs-stream.git"
+    "url": "git+https://github.com/forhad-h/nodejs-social-media.git"
   },
   "keywords": [
     "nodejs",
@@ -18,9 +18,9 @@
   "author": "Forhad Hosain",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/forhad-h/nodejs-stream/issues"
+    "url": "https://github.com/forhad-h/nodejs-social-media/issues"
   },
-  "homepage": "https://github.com/forhad-h/nodejs-stream#readme",
+  "homepage": "https://github.com/forhad-h/nodejs-social-media#readme",
   "dependencies": {
     "facebook-api-video-upload": "^2.0.1",
     "lodash": "^4.17.15",
