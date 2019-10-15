@@ -3,8 +3,8 @@ const rp = require('request-promise')
 
   ; (async () => {
     const fileUrl = 'https://www.example.com/preview.mp4'
-    const objectId = 'page/group id'
-    const accessToken = 'access-token'
+    const objectId = process.env.ID
+    const accessToken = process.env.ACCESS_TOKEN
 
     const formData = { source: request(fileUrl) }
 

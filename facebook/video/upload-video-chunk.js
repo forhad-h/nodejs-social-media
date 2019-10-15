@@ -14,8 +14,8 @@ const fileUrl = 'https://www.example.com/test.mp4'
 const splitUrl = fileUrl.split('/')
 const filename = splitUrl[splitUrl.length - 1]
 const localDir = `${__dirname}/temp/${filename}`
-const access_token = "acctess-token"
-const uri = `https://graph-video.facebook.com/v4.0/${page / group - id}/videos`
+const access_token = process.env.ACCESS_TOKEN
+const uri = `https://graph-video.facebook.com/v4.0/${process.env.ID}/videos`
 
 // download the remote file
 const downloadFile = request(fileUrl).pipe(fs.createWriteStream(localDir))

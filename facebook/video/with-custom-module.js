@@ -8,8 +8,8 @@ const stream = request('https://example.com/image_name.mp4').pipe(fs.createWrite
 stream.on('finish', () => {
   console.log('finished piping.')
   const args = {
-    token: 'page/group token',
-    id: 'page/group id',
+    token: process.env.ACCESS_TOKEN,
+    id: process.env.ID,
     stream: fs.createReadStream('./image_name.mp4'),
     title: "test video",
     description: "video upload in FB page"
