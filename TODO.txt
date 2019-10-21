@@ -1,1 +1,3 @@
 # more about split file in multiple parts to upload as a chunk with API
+# upload video more than 30 seconds -> hints: setup media_category
+# research more about 'whilst' function of 'async' module in typescript

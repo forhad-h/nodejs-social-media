@@ -10,11 +10,11 @@ var client = new Twitter({
   access_token_secret: process.env.TOKEN_SECRET
 });
 
-const filePath = './sample.mp4'
+const filePath = process.cwd() + '/temp/ad.mp4'
 const mediaType = 'video/mp4'
 const mediaSize = fs.statSync(filePath).size
 const chunkSize = 1000000
-const chunkBuffer = new Buffer.alloc(chunkSize)
+const chunkBuffer = Buffer.alloc(chunkSize)
 
 fs.open(filePath, 'r', async (err, fd) => {
   if (err) return console.error(err)
@@ -26,12 +26,12 @@ fs.open(filePath, 'r', async (err, fd) => {
 
 
   const chunkUploadRes = whilst(
-    cb => cb(null, offset < mediaSize),
-    cb => {
+    function test(cb) { cb(null, offset < mediaSize) },
+    function iter(callback) {
       const bytesRead = fs.readSync(fd, chunkBuffer, 0, chunkSize, null)
       const data = bytesRead < chunkSize ? chunkBuffer.slice(0, bytesRead) : chunkBuffer
       console.log('offset', offset)
-      appendUpload(initUploadRes, segment_index, data.toString('base64')).then(res => cb(null, res))
+      appendUpload(initUploadRes, segment_index, data.toString('base64')).then(res => callback(null, res))
       segment_index++
       offset += chunkSize
     }
