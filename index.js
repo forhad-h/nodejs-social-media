@@ -1,4 +1,4 @@
 require('dotenv').config()
 
 
-require('./twitter/tweetVideo')
+require('./linkedin/shareImage')
