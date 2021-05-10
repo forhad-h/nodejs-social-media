@@ -27,7 +27,7 @@
     "dotenv": "^8.1.0",
     "facebook-api-video-upload": "^2.0.1",
     "form-data": "^2.5.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "oauth": "^0.9.15",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
